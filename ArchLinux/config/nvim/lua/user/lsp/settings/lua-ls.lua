@@ -1,7 +1,6 @@
 local nvim_lsp = require('lspconfig')
 
 nvim_lsp.lua_ls.setup {
-  cmd = {"path_to_lua-language-server_binary_here"},
   settings = {
     Lua = {
       diagnostics = {
