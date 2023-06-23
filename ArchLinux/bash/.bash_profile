@@ -52,3 +52,4 @@ if type "dircolors" > /dev/null 2>&1; then
     fi
 fi
 
+export PATH=/home/grant/.local/bin:$PATH
