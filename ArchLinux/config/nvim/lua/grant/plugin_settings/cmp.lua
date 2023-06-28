@@ -48,8 +48,8 @@ cmp.setup({
         luasnip.expand()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
-      elseif luasnip.check_backspace() then
-        fallback()
+--      elseif luasnip.check_backspace() then
+ --       fallback()
       else
         fallback()
       end
@@ -113,12 +113,12 @@ cmp.setup.cmdline(':', {
 })
 --, 'lua-language-server'
 -- Set up lspconfig.
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-local lspconfig = require('lspconfig')
-lspconfig['clangd'].setup {
-  capabilities = capabilities
-}
-lspconfig['lua_ls'].setup {
-  capabilities = capabilities
-}
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+-- local lspconfig = require('lspconfig')
+-- lspconfig['clangd'].setup {
+--   capabilities = capabilities
+-- }
+-- lspconfig['lua_ls'].setup {
+--   capabilities = capabilities
+-- }

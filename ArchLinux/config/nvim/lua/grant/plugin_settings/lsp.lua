@@ -45,11 +45,12 @@ M.setup = function()
 end
 
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Setup language servers.
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
-lspconfig.clangd.setup {}
+lspconfig.clangd.setup { capabilities = capabilities }
 lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   settings = {
@@ -65,6 +66,7 @@ lspconfig.lua_ls.setup {
       -- ... more Lua language server settings here ...
     },
   },
+  capabilities = capabilities
 }
 
 -- Global mappings.
