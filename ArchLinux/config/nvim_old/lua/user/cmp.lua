@@ -45,7 +45,7 @@ local kind_icons = {
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
-cmp.setup {
+cmp.setup = {
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -112,6 +112,7 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    { name = "nvim_lsp" }
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,

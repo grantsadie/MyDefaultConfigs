@@ -14,6 +14,9 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 
 keymap("n", "<leader>e", ":NvimTreeToggle <cr>", opts)
 
+keymap("n", "qwe", ":q!<CR>", opts)
+keymap("n", "<C-s>", ":w<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -30,7 +33,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -57,5 +60,13 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope --
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+-- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+-- keymap("n", "<C-S-f>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>ff", "<cmd> Telescope find_files <CR>", opts)
+keymap("n", "<leader>fa", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", opts)
+keymap("n", "<leader>fw", "<cmd> Telescope live_grep <CR>", opts)
+keymap("n", "<leader>fb", "<cmd> Telescope buffers <CR>", opts)
+keymap("n", "<leader>fh", "<cmd> Telescope help_tags <CR>", opts)
+keymap("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>", opts)
+keymap("n", "<leader>fz", "<cmd> Telescope current_buffer_fuzzy_find <CR>", opts)
+
