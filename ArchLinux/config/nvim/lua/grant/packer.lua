@@ -45,6 +45,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
 
   use 'mfussenegger/nvim-dap' -- debugger
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'

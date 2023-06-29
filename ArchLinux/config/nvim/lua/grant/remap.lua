@@ -12,7 +12,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":NvimTreeToggle <cr>", opts)
+keymap("n", "<leader>t", ":NvimTreeToggle <cr>", opts)
 
 keymap("n", "qwe", ":q!<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
@@ -70,3 +70,5 @@ keymap("n", "<leader>fh", "<cmd> Telescope help_tags <CR>", opts)
 keymap("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>", opts)
 keymap("n", "<leader>fz", "<cmd> Telescope current_buffer_fuzzy_find <CR>", opts)
 
+-- C++ clangd Configuration
+keymap("n", "<S-c>", ":ClangdSwitchSourceHeader <CR>", opts)
